@@ -4,6 +4,7 @@ const feedbackList = document.getElementById('feedbackList');
 
 // Array to hold feedback 
 let feedbackArray = ["App is a bit glitchy", "Great Customer Service"];
+updateFeedbackList();
 
 // Handle feedback submission
 submitButton.addEventListener('click', () => {

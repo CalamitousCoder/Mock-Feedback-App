@@ -9,4 +9,29 @@ let feedbackArray = [];
 // Handle feedback submission
 submitButton.addEventListener('click', () => {
     const feedback = feedbackInput.value.trim();
-    if (feedback !== "")
+    
+    // Check if feedback is not empty
+    if (feedback !== "") {
+        // Add the feedback to the array
+        feedbackArray.push(feedback);
+
+        // Clear the input field
+        feedbackInput.value = "";
+
+        // Update the feedback list on the page
+        updateFeedbackList();
+    }
+});
+
+// Function to update the feedback list on the webpage
+function updateFeedbackList() {
+    // Clear the existing list (if any)
+    feedbackList.innerHTML = '';
+
+    // Loop through the feedback array and add each feedback item to the list
+    feedbackArray.forEach(feedback => {
+        const li = document.createElement('li');
+        li.textContent = feedback;
+        feedbackList.appendChild(li);
+    });
+}

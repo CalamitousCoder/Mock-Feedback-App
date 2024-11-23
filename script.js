@@ -30,8 +30,8 @@ function updateFeedbackList() {
 
     // Loop through the feedback array and add each feedback item to the list
     feedbackArray.forEach(feedback => {
-        const li = document.createElement('li');
-        li.textContent = feedback;
-        feedbackList.appendChild(li);
+        const li = document.createElement('li'); // Create a list item for each feedback
+        li.textContent = feedback;  // Set the text of the list item
+        feedbackList.appendChild(li);  // Append the list item to the ul
     });
 }
